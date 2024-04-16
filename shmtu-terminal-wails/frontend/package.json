@@ -9,12 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "path": "^0.12.7",
     "pinia": "^2.1.7",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@babel/types": "^7.24.0",
+    "@types/node": "^20.12.7",
     "@vitejs/plugin-vue": "^5.0.4",
     "naive-ui": "^2.38.1",
     "typescript": "^5.4.4",
