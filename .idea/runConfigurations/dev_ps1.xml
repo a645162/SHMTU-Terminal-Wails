@@ -1,6 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="dev.ps1" type="PowerShellRunType" factoryName="PowerShell" scriptUrl="$PROJECT_DIR$/Scripts/dev/dev.ps1" workingDirectory="H:\SHMTU\Terminal\SHMTU-Terminal-Wails\shmtu-terminal-wails" executablePath="C:/Windows/System32/WindowsPowerShell/v1.0/pwsh.exe">
-    <envs />
-    <method v="2" />
-  </configuration>
-</component>

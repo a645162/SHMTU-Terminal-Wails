@@ -1,6 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="upgrade.ps1" type="PowerShellRunType" factoryName="PowerShell" scriptUrl="$PROJECT_DIR$/Scripts/frontend/upgrade.ps1" executablePath="C:/Windows/System32/WindowsPowerShell/v1.0/pwsh.exe">
-    <envs />
-    <method v="2" />
-  </configuration>
-</component>
