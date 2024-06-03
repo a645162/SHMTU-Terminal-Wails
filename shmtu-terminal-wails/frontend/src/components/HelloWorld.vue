@@ -1,10 +1,12 @@
 <script lang="ts" setup>
 import {reactive} from 'vue'
-import {Greet1} from '../../wailsjs/go/main/App'
+import {GetMap1, GetMap2, Greet1} from '../../wailsjs/go/main/App'
 
 const data = reactive({
   name: "",
   resultText: "Please enter your name below 👇",
+  myMap1: {},
+  myMapArray: [],
 })
 
 function greet() {
@@ -13,11 +15,41 @@ function greet() {
   })
 }
 
+function map1() {
+  GetMap1().then(result => {
+    data.myMap1 = result
+  })
+}
+
+function map2() {
+  GetMap2().then(result => {
+    data.myMapArray = result
+  })
+}
+
+
 </script>
 
 <template>
   <main>
     <div id="result" class="result">{{ data.resultText }}</div>
+
+    <button class="btn" @click="map1">map1</button>
+
+    <div id="app">
+      <div v-for="(value, key) in data.myMap1" :key="key">
+        {{ key }}: {{ value }}
+      </div>
+    </div>
+
+    <button class="btn" @click="map2">map2</button>
+
+    <div id="app">
+      <div v-for="(map, index) in data.myMapArray" :key="index">
+        <div v-for="(value, key) in map">{{ key }}: {{ value }}</div>
+      </div>
+    </div>
+
     <div id="input" class="input-box">
       <input id="name" v-model="data.name" autocomplete="off" class="input" type="text"/>
       <button class="btn" @click="greet">Greet</button>
